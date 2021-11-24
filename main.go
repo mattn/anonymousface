@@ -1,9 +1,7 @@
 package main
 
-//go:generate go install github.com/rakyll/statik@latest
-//go:generate statik -src=data -f -include "*"
-
 import (
+	"embed"
 	"flag"
 	"fmt"
 	"image"
@@ -14,11 +12,8 @@ import (
 	"os"
 	"runtime"
 
-	_ "github.com/mattn/anonymousface/statik"
-
 	pigo "github.com/esimov/pigo/core"
 	"github.com/nfnt/resize"
-	"github.com/rakyll/statik/fs"
 	"golang.org/x/image/draw"
 )
 
@@ -31,6 +26,9 @@ var revision = "HEAD"
 var (
 	maskImg    image.Image
 	classifier *pigo.Pigo
+
+	//go:embed data/*
+	static embed.FS
 )
 
 func main() {
@@ -43,12 +41,7 @@ func main() {
 		return
 	}
 
-	statikFS, err := fs.New()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	f, err := statikFS.Open("/mask.png")
+	f, err := static.Open("data/mask.png")
 	if err != nil {
 		log.Fatal("cannot open mask.png:", err)
 	}
@@ -59,7 +52,7 @@ func main() {
 		log.Fatal("cannot decode mask.png:", err)
 	}
 
-	f, err = statikFS.Open("/facefinder")
+	f, err = static.Open("data/facefinder")
 	if err != nil {
 		log.Fatal("cannot open facefinder:", err)
 	}
