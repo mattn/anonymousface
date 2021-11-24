@@ -3,4 +3,4 @@ WORKDIR /go/src/app
 COPY . ./
 RUN go install
 COPY . .
-CMD ["app"]
+CMD ["anonymousface"]
