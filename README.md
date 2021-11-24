@@ -11,7 +11,7 @@ $ anonymousface < input.jpg > output.jpg
 ## Installation
 
 ```
-go install github.com/mattn/anonymousface:latest
+go install github.com/mattn/anonymousface@latest
 ```
 
 ## License
