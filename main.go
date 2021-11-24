@@ -4,12 +4,15 @@ package main
 //go:generate statik -src=data -f -include "*"
 
 import (
+	"flag"
+	"fmt"
 	"image"
 	"image/jpeg"
 	_ "image/png"
 	"io/ioutil"
 	"log"
 	"os"
+	"runtime"
 
 	_ "github.com/mattn/anonymousface/statik"
 
@@ -19,12 +22,27 @@ import (
 	"golang.org/x/image/draw"
 )
 
+const name = "anonymousface"
+
+const version = "0.0.1"
+
+var revision = "HEAD"
+
 var (
 	maskImg    image.Image
 	classifier *pigo.Pigo
 )
 
 func main() {
+	var showVersion bool
+	flag.BoolVar(&showVersion, "V", false, "Print the version")
+	flag.Parse()
+
+	if showVersion {
+		fmt.Printf("%s %s (rev: %s/%s)\n", name, version, revision, runtime.Version())
+		return
+	}
+
 	statikFS, err := fs.New()
 	if err != nil {
 		log.Fatal(err)
