@@ -19,7 +19,7 @@ import (
 
 const name = "anonymousface"
 
-const version = "0.0.3"
+const version = "0.0.4"
 
 var revision = "HEAD"
 
