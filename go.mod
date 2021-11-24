@@ -1,4 +1,4 @@
-module anonymousface
+module github.com/mattn/anonymousface
 
 go 1.15
 
