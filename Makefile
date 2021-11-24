@@ -61,5 +61,5 @@ $(GOBIN)/ghr:
 	cd && go get github.com/tcnksm/ghr
 
 push:
-	docker build -t mattn/anonymousface:latest
+	docker build -t mattn/anonymousface:latest .
 	docker push mattn/anonymousface:latest
