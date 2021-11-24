@@ -14,6 +14,18 @@ $ anonymousface < input.jpg > output.jpg
 go install github.com/mattn/anonymousface@latest
 ```
 
+### Building from source
+
+```bash
+git clone https://github.com/mattn/anonymousface.git && cd anonymousface
+```
+
+and then
+
+```bash
+go install
+```
+
 ## License
 
 MIT
