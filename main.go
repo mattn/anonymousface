@@ -101,7 +101,6 @@ func main() {
 	for _, face := range faces {
 		pt := image.Point{face.Col - face.Scale/2, face.Row - face.Scale/2}
 		fimg := resize.Resize(uint(face.Scale), uint(face.Scale), maskImg, resize.NearestNeighbor)
-		log.Println(pt.X, pt.Y, face.Scale)
 		draw.Copy(canvas, pt, fimg, fimg.Bounds(), draw.Over, nil)
 	}
 	err = jpeg.Encode(os.Stdout, canvas, &jpeg.Options{Quality: 100})
