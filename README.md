@@ -1,7 +1,11 @@
 # anonymousface
 
+## Before
+
 <img src="https://imgur.com/Xc5918M.jpg" width="25%" style="display:inline;">
-<div style="display:inline;width:5px;"></div>
+
+## After
+
 <img src="https://imgur.com/jRQnPJC.jpg" width="25%" style="display:inline;">
 
 ![](https://raw.githubusercontent.com/mattn/oracle-cloud-function-anonymousface/main/screenshot.png)
