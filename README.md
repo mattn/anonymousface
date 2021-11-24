@@ -1,9 +1,5 @@
 # anonymousface
 
-<img src="https://raw.githubusercontent.com/mattn/anonymousface/main/assets/input.jpeg" width="25%" style="display:inline;">
-<div style="display:inline;width:5px;"></div>
-<img src="https://raw.githubusercontent.com/mattn/anonymousface/main/assets/output.jpeg" width="25%" style="display:inline;">
-
 ![](https://raw.githubusercontent.com/mattn/oracle-cloud-function-anonymousface/main/screenshot.png)
 
 ## Usage
