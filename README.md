@@ -1,8 +1,8 @@
 # anonymousface
 
-<img src="https://imgur.com/Xc5918M.jpg" width="25%" style="display:inline;">
+<img src="https://raw.githubusercontent.com/mattn/anonymousface/main/assets/input.jpeg" width="25%" style="display:inline;">
 <div style="display:inline;width:5px;"></div>
-<img src="https://imgur.com/jRQnPJC.jpg" width="25%" style="display:inline;">
+<img src="https://raw.githubusercontent.com/mattn/anonymousface/main/assets/output.jpeg" width="25%" style="display:inline;">
 
 ![](https://raw.githubusercontent.com/mattn/oracle-cloud-function-anonymousface/main/screenshot.png)
 
@@ -18,7 +18,7 @@ $ anonymousface < input.jpg > output.jpg
 go install github.com/mattn/anonymousface@latest
 ```
 
-### Using make file
+### Building from source
 
 ```bash
 git clone https://github.com/mattn/anonymousface.git && cd anonymousface
@@ -27,7 +27,7 @@ git clone https://github.com/mattn/anonymousface.git && cd anonymousface
 and then
 
 ```bash
-make
+go install
 ```
 
 ## License
@@ -39,7 +39,3 @@ MIT
 ## Author
 
 Yasuhiro Matsumoto (a.k.a. mattn)
-
-```
-
-```
